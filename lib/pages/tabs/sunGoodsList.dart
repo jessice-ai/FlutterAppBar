@@ -3,9 +3,10 @@ import 'package:flutter_app/pages/tabs/sunHome.dart';
 import 'sunHome.dart';
 
 class sunGoodsList extends StatelessWidget{
+  final arguments;
   String title;
   int sunCount;
-  sunGoodsList({this.title="商品列表页面",this.sunCount=1});
+  sunGoodsList({this.arguments});
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -28,18 +29,18 @@ class sunGoodsList extends StatelessWidget{
         },
       ),
       appBar: AppBar(
-        title: Text("${this.title}"),
+        title: Text("${arguments!=null ?  arguments['title'] : 0}"),
       ),
       body: ListView(
         children: <Widget>[
           ListTile(
-            title: Text("标题 ${this.sunCount}"),
+            title: Text("标题 ${arguments!=null ?  arguments['id'] : 0}"),
           ),
           ListTile(
-            title: Text("标题 ${this.sunCount}"),
+            title: Text("标题 ${arguments!=null ?  arguments['id'] : 0}"),
           ),
           ListTile(
-            title: Text("标题 ${this.sunCount}"),
+            title: Text("标题 ${arguments!=null ?  arguments['id'] : 0}"),
           ),
         ],
       ),

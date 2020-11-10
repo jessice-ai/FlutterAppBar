@@ -24,7 +24,10 @@ class sunHomeSon extends State{
           child: Text("跳转到宝贝页面"),
           onPressed: (){
             //命名路由跳转到某个页面
-            Navigator.pushNamed(context, '/goods');
+            Navigator.pushNamed(context, '/goods',arguments:{
+              "id":123,
+              "title":"商品标题"
+            });
           },
           color: Theme.of(context).accentColor, //颜色主题
           textTheme: ButtonTextTheme.primary, //文本主题
