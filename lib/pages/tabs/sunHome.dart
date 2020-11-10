@@ -19,14 +19,30 @@ class sunHomeSon extends State{
       crossAxisAlignment: CrossAxisAlignment.start, //横轴
       mainAxisAlignment: MainAxisAlignment.center,  //纵轴
       children: <Widget>[
+        ///向无状态组件，StatelessWidget 传递参数
         //按钮一
         RaisedButton(
-          child: Text("跳转到宝贝页面"),
+          child: Text("向无状态组件，StatelessWidget 传递参数"),
           onPressed: (){
             //命名路由跳转到某个页面
             Navigator.pushNamed(context, '/goods',arguments:{
               "id":123,
-              "title":"商品标题"
+              "title":"商品"
+            });
+          },
+          color: Theme.of(context).accentColor, //颜色主题
+          textTheme: ButtonTextTheme.primary, //文本主题
+        ),
+        SizedBox(height: 30,),
+
+        ///向有状态组件，StatefulWidget 传递参数
+        RaisedButton(
+          child: Text("向有状态组件，StatefulWidget 传递参数"),
+          onPressed: (){
+            //命名路由跳转到某个页面
+            Navigator.pushNamed(context, '/sunNews',arguments:{
+              "id":123,
+              "title":"新闻"
             });
           },
           color: Theme.of(context).accentColor, //颜色主题
