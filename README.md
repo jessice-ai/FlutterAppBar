@@ -12,3 +12,4 @@ A new Flutter application.
 6、返回根路由<br>
 7、路由替换<br>
 8、TitleBar<br>
+9、TitleBar切换<br>
