@@ -46,6 +46,17 @@ class sunBarSon extends State{
           centerTitle: true,
           title: Text("aaa"),
           bottom: TabBar(
+            //1、指示器颜色
+            indicatorColor: Colors.limeAccent,
+            //2、指示器高度
+            //indicatorWeight: 1,
+            //3、文字颜色
+            labelColor: Colors.yellow,
+            //4、未选中的颜色
+            unselectedLabelColor: Colors.white,
+            //5、指示器长度
+            //indicatorSize: TabBarIndicatorSize.tab, // TabBarIndicatorSize.label 跟文字一样长 TabBarIndicatorSize.tab 默认
+
             tabs: <Widget>[
               Tab(text:"热门"),
               Tab(text:"推荐"),
