@@ -30,6 +30,8 @@ class sunApp extends StatelessWidget {
      */
     return MaterialApp(
       //home: sunFooterTabsContent(),
+      //删除App自带Debug图标
+      debugShowCheckedModeBanner: false,
       initialRoute: '/sunTags',  //这个是App初始化时候加载那个路由
       //theme 主体
       theme: ThemeData(primarySwatch: Colors.amber),//修改主体颜色
