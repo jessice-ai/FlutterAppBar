@@ -9,25 +9,28 @@ import 'sunMy.dart';
  * StatefulWidget 有状态组件，点击页面脚本出发页面数据发生变化
  */
 class sunFooterTabsContent extends StatefulWidget{
+  final index;
+  sunFooterTabsContent({Key key,this.index=0}) : super(key:key);
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
     //throw UnimplementedError();
     //这里不能直接返回组件，因为返回的数据类型是 State<StatefulWidget>
-    return sunFooterTabsContentState();
+    return _sunFooterTabsContentState(index);
   }
 }
-class sunFooterTabsContentState extends State{
-  /**
-   * 创建一个数组，存储三个组件
-   */
+class _sunFooterTabsContentState extends State{
+  int _currentIndex = 0;
+  _sunFooterTabsContentState(index){
+    this._currentIndex = index;
+  }
+  /// 创建一个数组，存储三个组件
   List _pageList = [
     sunHome(),
     sunCategory(),
     sunSetting(),
     sunMy()
   ];
-  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

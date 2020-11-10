@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/tabs/sunGoodsList.dart';
 import 'sunFooterTabsContent.dart';
 class sunRegisterSuccessReturn extends StatefulWidget{
   @override
@@ -26,10 +25,10 @@ class sunRegisterSuccessReturnSon extends State{
             child: Text("返回指定的根页面"),
             onPressed: (){
               //命名路由跳转到某个页面
-              Navigator.pushNamed(context, '/sunRegisterSuccessReturn');
-              //销毁之前所有的跳转记录，直接返回指定的页面
+              //Navigator.pushNamed(context, '/sunRegisterSuccessReturn');
+              //销毁之前所有跳转记录，直接返回指定的页面
               Navigator.of(context).pushAndRemoveUntil(
-                  new MaterialPageRoute(builder: (context) => new sunFooterTabsContent()), (route)=> route == null);
+                  new MaterialPageRoute(builder: (context) => new sunFooterTabsContent(index: 3,)), (route)=> route == null);
             },
             color: Theme.of(context).accentColor, //颜色主题
             textTheme: ButtonTextTheme.primary, //文本主题
