@@ -27,7 +27,7 @@ class sunRegisterSon extends State{
               //命名路由跳转到某个页面
               //Navigator.pushNamed(context, '/sunRegisterSuccess');
 
-              //路由替换，注册成功之后，不再返回之前页面，点击返回直接进入首页
+              //路由替换:注册成功,不再返回前页面，直接跳过前一个
               Navigator.of(context).pushReplacementNamed('/sunRegisterSuccess');
             },
             color: Theme.of(context).accentColor, //颜色主题
